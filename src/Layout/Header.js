@@ -20,13 +20,16 @@ const Header = () => {
     </Box>;
 
     return (
-        <HStack color={'#F4C600'} >
-            <Box  display={'flex'} h={'162px'} w={'100%'} >
-                <Text size={'2xl'} pt={'105px'} textAlign={'left'} me={4}>see.it</Text>
-                <Text flexGrow={1} size={'lg'} pt={'118px'} textAlign={'left'}>You have to see it</Text>
-                {icon}
-            </Box>
-        </HStack>
+        <>
+           
+            <HStack color={'#F4C600'} >
+                <Box  display={'flex'} h={'162px'} w={'100%'} >
+                    <Text size={'2xl'} pt={'105px'} textAlign={'left'} me={4}>see.it</Text>
+                    <Text flexGrow={1} size={'lg'} pt={'118px'} textAlign={'left'}>You have to see it</Text>
+                    {icon}
+                </Box>
+            </HStack>
+        </>
     );
 };
 
