@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 export const DropDownMenu = () => {
     return (
-        <Accordion allowMultiple color={'#FCFCFC'}>
+        <Accordion allowMultiple color={'#FCFCFC'} pb={10}>
             <AccordionItem>
                 <Text>
                     <AccordionButton>

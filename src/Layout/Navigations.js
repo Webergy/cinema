@@ -2,6 +2,7 @@ import { SmallAddIcon } from '@chakra-ui/icons';
 import { Button, Divider, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, HStack, Icon, Text, useDisclosure } from '@chakra-ui/react';
 import React from 'react';
 import { FaInstagramSquare } from 'react-icons/fa';
+import { Link  } from 'react-router-dom';
 
 export const Navigations = () => {
     const { isOpen, onOpen, onClose } = useDisclosure();
@@ -26,16 +27,18 @@ export const Navigations = () => {
                     </DrawerHeader>
 
                     <DrawerBody ps={0} pe={0} >
-                        <HStack mt={8} size='md'>
-                            <Icon as={FaInstagramSquare} background={'#6A45BE'} w={6} h={6} me={4}/> 
-                            <Text>Main</Text>
-                        </HStack>
-
-                        <HStack mt={8} size='md'>
-                            <Icon as={FaInstagramSquare} background={'#6A45BE'} w={6} h={6} me={4}/> 
-                            <Text>Repetitory</Text>
-                        </HStack>
-
+                        <Link to='/' onClick={onClose}>
+                            <HStack mt={8} size='md'>
+                                <Icon as={FaInstagramSquare} background={'#6A45BE'} w={6} h={6} me={4}/> 
+                                <Text>Main</Text>
+                            </HStack>
+                        </Link>
+                        <Link to='/repetitory' onClick={onClose}>
+                            <HStack mt={8} size='md'>
+                                <Icon as={FaInstagramSquare} background={'#6A45BE'} w={6} h={6} me={4}/> 
+                                <Text>Repetitory</Text>
+                            </HStack>
+                        </Link>
                         <HStack mt={8} size='md'>
                             <Icon as={FaInstagramSquare} background={'#6A45BE'} w={6} h={6} me={4}/> 
                             <Text>Events</Text>

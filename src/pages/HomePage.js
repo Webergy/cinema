@@ -13,6 +13,7 @@ const HomePage = () => {
     return (
         <>
             <MainPoster/>
+            <Text color={'#F4C600'}  mt={6} size={'2xl'} textAlign={'left'} mb={2}>Now showing</Text>
             <Slider/>
             <Search/>
 
