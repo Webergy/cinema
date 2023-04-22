@@ -43,6 +43,11 @@ const theme = extendTheme({
                     lineHeight:'18px',
                     fontWeight:'700'
                 },
+                'xs':{
+                    fontSize:'12px',
+                    lineHeight:'20px',
+                    fontWeight:'400'
+                },
             },
         }
         ,

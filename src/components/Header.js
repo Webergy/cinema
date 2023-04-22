@@ -1,9 +1,10 @@
 import { Box, HStack, Text } from '@chakra-ui/react';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({marginTop}) => {
 
-    const icon = <Box  pt={'118px'} me='0'><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+    const icon = <Box  me='0'><svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_500_6749)">
             <circle cx="12.5" cy="12.5" r="11.5" stroke="#F4C600" strokeWidth="2"/>
             <mask id="path-2-inside-1_500_6749" fill="white">
@@ -21,12 +22,11 @@ const Header = () => {
 
     return (
         <>
-           
-            <HStack color={'#F4C600'} >
-                <Box  display={'flex'} h={'162px'} w={'100%'} >
-                    <Text size={'2xl'} pt={'105px'} textAlign={'left'} me={4}>see.it</Text>
-                    <Text flexGrow={1} size={'lg'} pt={'118px'} textAlign={'left'}>You have to see it</Text>
-                    {icon}
+            <HStack mt={marginTop} color={'#F4C600'} >
+                <Box  display={'flex'}w={'100%'} alignItems={'center'} >
+                    <Text size={'2xl'} textAlign={'left'} me={4}>see.it</Text>
+                    <Text flexGrow={1} size={'lg'}  textAlign={'left'}>You have to see it</Text>
+                    <Link to={'/login'}>{icon}</Link>
                 </Box>
             </HStack>
         </>

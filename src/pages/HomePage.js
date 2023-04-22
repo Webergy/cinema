@@ -7,11 +7,13 @@ import { Search } from '../components/Search';
 import { Events } from '../components/Events';
 import { TicketsOffer } from '../components/TicketsOffer';
 import { DropDownMenu } from '../components/DropDownMenu';
+import Header from '../components/Header';
 
 const HomePage = () => {
 
     return (
         <>
+            <Header marginTop={20} />
             <MainPoster/>
             <Text color={'#F4C600'}  mt={6} size={'2xl'} textAlign={'left'} mb={2}>Now showing</Text>
             <Slider/>
