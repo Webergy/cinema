@@ -28,7 +28,7 @@ export const LoginPage = () => {
                 <FormControl mt={5}>  
                     <Checkbox  w={'100%'} defaultChecked="false">Accept the website Terms and Conditions.</Checkbox>
                 </FormControl>
-                <Button variant={'base'} mt={6} borderRadius={50} w={'100%'}>Log into</Button>
+                <Link to={'/user'}> <Button variant={'base'} mt={6} borderRadius={50} w={'100%'}>Log into</Button></Link>
                 
                 <Text mt={4} width={'100%'}  size="sm">
                 Are you new? Creating an account is quick.<br/>
