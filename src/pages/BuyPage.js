@@ -61,7 +61,7 @@ export const BuyPage = () => {
             <Text size={'md'} textAlign={'left'} mt={6}>
                 $ 17.50
             </Text>
-            <Button w={'100%'} borderRadius={50} mt={8}>
+            <Button w={'100%'} variant={'base'} borderRadius={50} mt={8}>
                 Ready to buy
             </Button>   
         </Box>
