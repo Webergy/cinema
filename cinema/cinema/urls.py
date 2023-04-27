@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from numpy.f2py.cfuncs import includes
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include("cinemaApp.urls"))
+    path('',include("cinemaApp.urls")),
 ]
