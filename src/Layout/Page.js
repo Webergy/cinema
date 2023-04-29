@@ -6,6 +6,7 @@ import { LoginPage } from "../pages/LoginPage";
 import { RegisterPage } from "../pages/RegisterPage";
 import { UserPage } from "../pages/UserPage";
 import { BuyPage } from "../pages/BuyPage";
+import { FilmPage } from "../pages/FilmPage";
 
 const Page = () => {
     return (
@@ -16,6 +17,8 @@ const Page = () => {
             <Route path="/register" element={<RegisterPage />} />
             <Route path="/user" element={<UserPage />} />
             <Route path="/buy" element={<BuyPage />} />
+            <Route path="/film" element={<FilmPage />} />
+
         </Routes>
         
     );
