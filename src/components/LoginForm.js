@@ -1,35 +1,18 @@
 import { Box, Button, Checkbox, FormControl, Input } from '@chakra-ui/react';
-import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import AuthContext from '../context/AuthContext';
 
 export const LoginForm = () => {
-    const [email,setEmail]= useState('');
-    const [password,setPassword]= useState('');
    
-    const handleSubmit = async (e) =>
-    {
-        e.preventDefault();
-    
-        try {
-            const  userData = {
-                email:email,
-                password:password
-            };
-    
-            await axios.post("url",userData);
-            
-        } catch (err) {
-            console.log(err);
-        } 
-    
-    };
+    let {loginUser} = useContext(AuthContext);
+   
     return (
-        <Box as='form' onSubmit={handleSubmit}>
+        <Box as='form' onSubmit={loginUser}>
             <FormControl pt={4} isRequired> 
-                <Input color={'#FCFCFC'}  border={'none'} type='email' value={email} onChange={(e)=>setEmail(e.target.value)}  background='#181C25' placeholder='Enter your Email' />   
+                <Input color={'#FCFCFC'}  border={'none'} type='email' name='email' background='#181C25' placeholder='Enter your Email' />   
             </FormControl>
             <FormControl mt={4} isRequired>  
-                <Input color={'#FCFCFC'}  border={'none'} type='password' value={password} onChange={(e)=>setPassword(e.target.value)}  background='#181C25' placeholder='Enter your Password' />   
+                <Input color={'#FCFCFC'}  border={'none'} type='password' name='password' background='#181C25' placeholder='Enter your Password' />   
             </FormControl>
             <FormControl mt={5}>  
                 <Checkbox  w={'100%'} defaultChecked="false">Remember me</Checkbox>
