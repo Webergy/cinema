@@ -35,6 +35,8 @@ db.sequelize = sequelize;
 
 db.user = require('./userModel.js')(sequelize, DataTypes);
 
+db.film = require('./filmModel.js')(sequelize, DataTypes);
+
 
 db.sequelize.sync({ force: false })
     .then(() => {

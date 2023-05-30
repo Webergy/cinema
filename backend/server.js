@@ -31,10 +31,12 @@ app.use( (req, res, next) => {
 
 
 const UserRouter = require('./routes/userRouter.js');
+const FilmRouter = require('./routes/filmRouter.js');
 
 
 
 app.use('/api/', UserRouter);
+app.use('/api/', FilmRouter);
 
 const PORT = process.env.PORT || 5000;
 
