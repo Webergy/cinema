@@ -20,8 +20,14 @@ const create = async (req, res) =>
     res.status(201).send(film);
 }
 
+const getFilms = async (req, res) =>
+{
+    const films = await Film.findAll();
+
+    res.status(200).send(films);
+}
 
 module.exports = {
    create,
-
+    getFilms
 };
