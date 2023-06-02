@@ -28,6 +28,3 @@ stderr.log
 .htaccess
 
 .env
-
-node_modules
-
