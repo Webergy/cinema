@@ -8,10 +8,12 @@ const Film = db.film;
 
 const create = async (req, res) =>
 {
-    const {title,director,premiere} = req.body;
+    const {title,director,premiere,description} = req.body;
+    
     const film = await Film.create({
         title,
         director,
+        description,
         premiere
     });
 
