@@ -12,6 +12,7 @@ export const DateSearch = () => {
                 type="date"
                 background={'gray'}
                 border={'none'}
+                
             />
         </FormControl>
     );
